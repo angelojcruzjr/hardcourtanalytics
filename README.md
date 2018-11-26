@@ -1,2 +1,1 @@
-# hardcourtanalytics
-Repo for my NBA site
+Repo for my NBA site source code.
