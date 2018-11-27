@@ -1,0 +1,195 @@
+.main-page {
+  background-color: #282c34;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.app-name-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin-top: 7.5%;
+  font-size: 2.5em;
+}
+
+.contact {
+  width: 100%;
+  height: 30px;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.contact-text {
+  color: white;
+}
+
+.contact-text:hover {
+  color: #00d8ff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.half-container {
+  flex: 1 0 50%;
+  overflow: hidden;
+}
+
+.ball {
+	z-index: 3;
+	height: 78%;
+	position: absolute;
+	top: 0px;
+	left: calc(50% - 50px);
+  width: 100px;
+	
+	-webkit-animation: bounce 4s forwards infinite, spin 4s linear infinite;
+	-moz-animation: bounce 4s forwards infinite, spin 4s linear infinite;
+	-ms-animation: bounce 4s forwards infinite, spin 4s linear infinite;
+  animation: bounce 4s forwards infinite, spin 4s linear infinite;
+}
+
+.shadow {
+	position: absolute;
+	height: 5px;
+  background-color: rgba(0,0,0,1);
+  bottom: calc(50% - 60px);
+  left: 50%;
+  width: 100px;
+	
+	-webkit-animation: shadow 4s forwards infinite;
+	-moz-animation: shadow 4s forwards infinite;
+	-ms-animation: shadow 4s forwards infinite;
+	animation: shadow 4s forwards infinite;
+
+}
+
+@keyframes bounce {
+	0% {
+		top: 0;
+		animation-timing-function: ease-in;
+	}
+	16% {
+		top: 12%;
+		animation-timing-function: ease-out;
+	}
+	32% {
+		top: 3%;
+		animation-timing-function: ease-in;
+	}
+	48% {
+		top: 12%;
+		animation-timing-function: ease-out;
+	}
+	62% {
+		top: 4%;
+		animation-timing-function: ease-in;
+	}
+	78% {
+		top: 12%;
+		animation-timing-function: ease-out;
+	}
+	85% {
+		top: 3%;
+		animation-timing-function: ease-in;
+	}
+  90% {
+		top: 12%;
+		animation-timing-function: ease-out;
+	}
+	100% {
+		top: 0;
+		animation-timing-function: ease-in;
+	}
+}
+
+
+@keyframes shadow {
+	0% {
+		width: 10px;
+		border-radius:10px/5px;
+		margin-left: -5px;
+		-webkit-animation-timing-function: ease-in; 
+    background-color: rgba(0,0,0,0.2);
+	}
+	16% {
+		width: 100px;
+		-webkit-border-radius:100px/5px;
+		margin-left: -50px;
+		-webkit-animation-timing-function: ease-out;
+    background-color: rgba(0,0,0,0.9);
+	}
+	32% {
+		width: 30px;
+		-webkit-border-radius: 30px/5px;
+		margin-left: -15px;
+		-webkit-animation-timing-function: ease-in;
+    background-color: rgba(0,0,0,.7);
+	}
+	48% {
+		width: 100px;
+		-webkit-border-radius:100px/5px;
+		margin-left: -50px;		
+		-webkit-animation-timing-function: ease-out;
+    background-color: rgba(0,0,0,.9);
+	}
+	62% {
+		width: 58px;
+		-webkit-border-radius:58px/5px;
+		margin-left: -29px;	
+		-webkit-animation-timing-function: ease-in;
+    background-color: rgba(0,0,0,0.7);
+	}
+	78% {
+		width: 100px;
+		-webkit-border-radius:100px/5px;
+		margin-left: -50px;
+		-webkit-animation-timing-function: ease-all;
+    background-color: rgba(0,0,0,0.9);
+	}
+	85% {
+		width: 58px;
+		-webkit-border-radius:58px/5px;
+		margin-left: -29px;
+		-webkit-animation-timing-function: ease-all;
+    background-color: rgba(0,0,0,0.85);
+	}
+  90% {
+		width: 100px;
+		-webkit-border-radius:100px/5px;
+		margin-left: -50px;
+		-webkit-animation-timing-function: ease-out;
+    background-color: rgba(0,0,0,0.85);
+	}
+	100% {
+		width: 10px;
+		-webkit-border-radius:10px/5px;
+		margin-left: -5px;
+		-webkit-animation-timing-function: ease-in;
+    background-color: rgba(0,0,0,0.9);
+	}
+}
+
+@keyframes spin { 
+  100% { 
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  .ball {
+    left: calc(50% - 25px) !important;
+    width: 50px !important;
+  }
+
+  .shadow {
+    bottom: calc(50% - 30px) !important;
+    width: 50px !important;
+  }
+}
