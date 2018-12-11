@@ -182,7 +182,7 @@
   }
 }
 
-@media only screen and (max-height: 350px) {
+@media screen and (max-height: 400px), screen and (max-width: 400px) {
   .ball {
     left: calc(50% - 25px) !important;
     width: 50px !important;
