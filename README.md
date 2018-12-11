@@ -1,1 +1,1 @@
-Repo for my NBA site source code.
+Repo for my NBA site source code. A landing pge is currently hosted at hardcourtanalytics.com. In the future, sub-domains will link to dev and prod.
